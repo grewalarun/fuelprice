@@ -1,0 +1,183 @@
+body * {
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+.pricebox  {
+  text-align: center;
+}
+
+.pricebox.ptr .h1 {
+  color: green;
+}
+.pricebox.dsl .h1 {
+  color: red;
+}
+
+span.down {
+  position: relative;
+  color: green;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+span.down:before {
+  content: '';
+  position: absolute;
+  border-top: 2rem solid;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 0 solid transparent;
+  left: 0;
+  top: 0.5rem;
+}
+span.up {
+  position: relative;
+  color: red;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+span.up:before {
+  content: '';
+  position: absolute;
+  border-bottom: 2rem solid;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 0 solid transparent;
+  left: 0;
+  top: 0.5rem;
+}
+.pricebox span.nut {
+  color: orange;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-left: 0;
+  line-height: 1px;
+}
+
+
+
+.pricebox .h1 {
+  font-size: 5em;
+  font-weight: 600;
+}
+.pricebox h4 {
+  font-size: 6em;
+}
+.priceHeader {
+  padding: 2rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 2px #eee;
+  background-color: rgba(0,0,0,0.03);
+}
+
+.priceHeader:after {
+  content: '';
+  position: absolute;
+  border-top: 7rem solid yellow;
+  border-bottom: 0rem solid transparent;
+  border-left: 8rem solid transparent;
+  border-right: 11rem solid yellow;
+  right: 1rem;
+  z-index: -1;
+  top: 0;
+}
+.updated {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.pricebox {
+  text-align: center;
+  box-shadow: 0 2px 2px #eee;
+  background-color: rgba(0,0,0,0.03);
+  margin: 1rem 0 0;
+  padding: 2rem;
+}
+
+
+ul.staeslist {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+ul.staeslist li {
+  width: 170px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  border-left: 4px solid #f7990c;
+  color: #ce800c;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+ul.staeslist li:hover { 
+border-color: #f00;
+color:#f00
+}
+
+ul.staeslist li span {
+  display: block;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #000;
+}
+h2.heading2 {
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 2px #eee;
+  background-color: rgba(0,0,0,0.03);
+  position: relative;
+}
+
+h2.heading2:before {
+  content: '';
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  border-top: 30px solid yellow;
+  position: absolute;
+  border-right: 30px solid transparent;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .priceHeader {
+    padding: 1rem;
+  }
+  .pricebox {
+    padding: 1rem;
+  }
+  .pricebox .h1 {
+    font-size: 2em;
+    font-weight: 600;
+}
+  .pricebox h4 {
+    font-size: 2em;
+    font-weight: 600;
+}
+h2.heading2 {
+  font-size: 1.4rem;
+}
+ul.staeslist li {
+  width: 155px;
+}
+.priceHeader {
+  display: block;
+}
+.priceHeader::after {
+height: 100%;
+}
+
+
+
+}
