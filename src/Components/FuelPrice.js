@@ -13,6 +13,7 @@ class FuelPrice extends Component {
       isLoading: true,
     };
   }
+  
   componentDidMount() {
     axios({
       method: "GET",
