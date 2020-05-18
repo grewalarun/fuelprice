@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FuelPrice from './Components/FuelPrice'
+//import FuelPrice from './Components/FuelPrice'
 
 function App() {
   return (
