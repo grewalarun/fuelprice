@@ -3,7 +3,7 @@ import Card from '../Components/Card';
 import axios from "axios";
 import { motion } from "framer-motion"
 import { Container, Row, Button } from "reactstrap";
-
+import logo from '../image/logo512.png';
 import trans from '../image/transport.gif';
 
 class Newui extends Component {
@@ -104,7 +104,9 @@ handleClick = (defState, defCity) => {
 
             
             </div> ))): (
-      <div className="loader">Loading</div>
+      <div className="loader text-center">
+          <img src={logo} alt="logo" />
+      </div>
     );
     }
 }
