@@ -77,7 +77,7 @@ handleClick = (defState, defCity) => {
           );
           const allstate = this.state.cities;
           const { isLoading } = this.state;        
-          return isLoading ? (
+          return !isLoading ? (
             urcity.map((u) => (
                  <div className="page-ui">
             {this.state.menustates?(<motion.div initial={{x:-100,opacity:0}} animate={{ x: 0,opacity:1 }} className="menustate">
