@@ -195,7 +195,7 @@ height: 100%;
 .card.petrol, .card.petrol .card-body {
 background-color: #242486;
 }
-.card.deisel, .card.deisel .card-body {
+.card.diesel, .card.diesel .card-body {
 background-color: #171727;
 }
 .card .card-header {
@@ -215,7 +215,7 @@ background-color: #171727;
 .card.petrol .card-body:before {
 box-shadow: inset -1px 1px 2px #2030a3;
 }
-.card.deisel .card-body:before {
+.card.diesel .card-body:before {
 box-shadow: inset -1px 1px 2px #171727;
 }
 span.largetext {

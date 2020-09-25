@@ -94,7 +94,7 @@ handleClick = (defState, defCity) => {
             <div className="stateName"><span>{u.state}</span> <Button color="link" onClick={this.showStates}>Change</Button></div>
 <Card data={{fuel:"petrol",rate:u.petrol,yesterday:u.petrol_yesterday}}/>
 
-<Card data={{fuel:"deisel",rate:u.diesel,yesterday:u.diesel_yesterday}}/>
+<Card data={{fuel:"diesel",rate:u.diesel,yesterday:u.diesel_yesterday}}/>
 
                 </Row>
                 <p className="text-center mt-4">Updated on {u.date}</p>
