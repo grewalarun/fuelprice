@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col} from "reactstrap";
 
 class FuelPrice extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class FuelPrice extends Component {
     axios({
       method: "GET",
       url:
-        "https://newsrain-petrol-diesel-prices-india-v1.p.rapidapi.com/capitals",
+        "https://newsrain-petrol-diesel-prices-india-v1.p.rapidapi.com/capitals/history",
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host":
