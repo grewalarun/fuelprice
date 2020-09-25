@@ -42,7 +42,9 @@ class Newui extends Component {
             console.log(error);
           });
       }
-
+style = {
+        style:"max-width:100%"
+}
 
 showStates = (e) => {
 e.preventDefault();
@@ -105,7 +107,7 @@ handleClick = (defState, defCity) => {
             
             </div> ))): (
       <div className="loader text-center">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" Style={this.style}/>
       </div>
     );
     }
