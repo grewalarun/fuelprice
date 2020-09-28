@@ -113,6 +113,7 @@ handleClick = (defState, defCity) => {
             </div> ))): (
       <div className="loader text-center">
           <img src={logo} alt="logo" style={{maxWidth:100+'%'}}/>
+          <p>Arun</p>
       </div>
     );
     }
