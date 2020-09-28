@@ -42,9 +42,6 @@ class Newui extends Component {
             console.log(error);
           });
       }
-style = {
-        style:"max-width:100%"
-}
 
 showStates = (e) => {
 e.preventDefault();
@@ -63,23 +60,30 @@ this.setState({
 })
 }
 handleClick = (defState, defCity) => {
+    localStorage.setItem('savedState', defState);
+    localStorage.setItem('savedCity', defCity);
     this.setState({
       defaultState: defState,
       defaultCity: defCity,
       menustates:false
     });
+
   };
 
     render() { 
+        console.log();
+
+        var st = localStorage.getItem('savedState')?localStorage.getItem('savedState'):this.state.defaultState;
+        var ct = localStorage.getItem('savedCity')?localStorage.getItem('savedCity'):this.state.defaultCity;
         const urcity = this.state.cities.filter(
             (a) =>
-              a.state === this.state.defaultState && a.city === this.state.defaultCity
+              a.state === st && a.city === ct
           );
           const allstate = this.state.cities;
           const { isLoading } = this.state;        
           return !isLoading ? (
             urcity.map((u) => (
-                 <div className="page-ui">
+                 <div className="page-ui" key={"990"}>
             {this.state.menustates?(<motion.div initial={{x:-100,opacity:0}} animate={{ x: 0,opacity:1 }} className="menustate">
                 <ul className="staeslist">
             {allstate.map((c, i) => (
@@ -91,6 +95,7 @@ handleClick = (defState, defCity) => {
           </ul>
           <Button color="info" onClick={this.hideStates}>Close</Button>
             </motion.div>):''}
+
             <Container>
                 <Row className="justify-content-center">
             <div className="stateName"><span>{u.state}</span> <Button color="link" onClick={this.showStates}>Change</Button></div>
@@ -107,7 +112,7 @@ handleClick = (defState, defCity) => {
             
             </div> ))): (
       <div className="loader text-center">
-          <img src={logo} alt="logo" Style={this.style.style}/>
+          <img src={logo} alt="logo" style={{maxWidth:100+'%'}}/>
       </div>
     );
     }
